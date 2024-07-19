@@ -6,6 +6,7 @@ import 'package:lorelay/components/card_button_delete.dart';
 import 'package:lorelay/models/product_item.dart';
 import 'package:lorelay/providers/order_provider.dart';
 import 'package:lorelay/services/my_colors.dart';
+import 'package:badges/badges.dart' as badges;
 
 class OrderRecapItem extends ConsumerStatefulWidget {
   const OrderRecapItem({super.key, required this.product, this.rowId});
@@ -24,6 +25,9 @@ class _OrderRecapItemState extends ConsumerState<OrderRecapItem> {
     String itemPrice = ref
         .watch(orderProvider.notifier)
         .getTotalItemPrice(widget.product.productId);
+    var itemQty = ref
+        .watch(orderProvider.notifier)
+        .getItemRowsCount(widget.product.productId);
 
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -57,13 +61,37 @@ class _OrderRecapItemState extends ConsumerState<OrderRecapItem> {
                         style: GoogleFonts.courgette(
                             fontSize: 14.0, color: MyColors.colorText),
                       ),
-                      CardButtonAdd(
-                        product: widget.product,
-                      ),
-                      CardButtonDelete(
-                        itemQty: 1,
-                        product: widget.product,
-                      ),
+                      Column(
+                        children: [
+                          itemQty > 0
+                              ? CardButtonDelete(
+                                  itemQty: itemQty,
+                                  product: widget.product,
+                                )
+                              : SizedBox(
+                                  width: 0,
+                                ),
+                          itemQty > 0
+                              ? badges.Badge(
+                                  position: badges.BadgePosition.topEnd(
+                                      top: -17, end: 8),
+                                  badgeContent: Text(
+                                    '$itemQty',
+                                    style: TextStyle(
+                                        color: MyColors.colorBackground),
+                                  ),
+                                  badgeStyle: badges.BadgeStyle(
+                                    padding: EdgeInsets.all(7),
+                                    borderSide: BorderSide(
+                                        color: Colors.white, width: 2),
+                                    badgeColor:
+                                        const Color.fromARGB(255, 0, 178, 6),
+                                  ),
+                                  child: CardButtonAdd(product: widget.product),
+                                )
+                              : CardButtonAdd(product: widget.product),
+                        ],
+                      )
                     ],
                   ),
                 ),

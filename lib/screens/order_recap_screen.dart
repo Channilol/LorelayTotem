@@ -23,20 +23,22 @@ class _OrderRecapScreenState extends ConsumerState<OrderRecapScreen> {
     List<ProductItem> productsList = Utils.products.toList();
     var orderRows = ref.watch(orderProvider)?.rows;
 
-    List<Widget> orderWidgets = [];
+    List<ProductItem> uniqueItems = [];
 
     for (int i = 0; i < orderRows!.length; i++) {
-      orderWidgets.add(OrderRecapItem(
-          product: productsList
-              .where((e) => e.productId == orderRows[i].productId)
-              .first,
-          rowId: orderRows[i].rowId));
+      var itemToCheck =
+          productsList.firstWhere((e) => e.productId == orderRows[i].productId);
+      if (!uniqueItems.any((e) => e.productId == itemToCheck.productId)) {
+        uniqueItems.add(itemToCheck);
+      }
     }
 
     return Scaffold(
       body: Column(
         children: [
-          Header(),
+          Header(
+            isOrderRecap: true,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -86,10 +88,9 @@ class _OrderRecapScreenState extends ConsumerState<OrderRecapScreen> {
                           childAspectRatio:
                               constraints.maxWidth / (2 * cardHeight),
                         ),
+                        itemCount: uniqueItems.length,
                         itemBuilder: (context, index) {
-                          for (var i = 0; i < orderWidgets.length; i++) {
-                            return orderWidgets[i]
-                          }
+                          return OrderRecapItem(product: uniqueItems[index]);
                         },
                       ),
                     )
