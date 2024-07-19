@@ -1,0 +1,182 @@
+[
+  {
+    "productId": "001",
+    "name": "Selezione Lorelay ",
+    "description": "I nostri grandi classici: Crema, Nocciola, Cioccolato, Pistacchio Puro",
+    "price": 6.3,
+    "image": "../lib/images/coppa_lorelay.jpg",
+    "categoryId": "C01",
+    "extras": [
+      {
+        "extraId": "E01",
+        "order": 1
+      },
+      {
+        "extraId": "E02",
+        "order": 2
+      },
+      {
+        "extraId": "E03",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "productId": "002",
+    "name": "Fragolosa",
+    "description": "Fragole fresche, gelato fiordilatte e di fragole, panna montata e salsa di fragole",
+    "price": 9.2,
+    "image": "../lib/images/coppa_fragolosa.jpg",
+    "categoryId": "C01",
+    "extras": [
+      {
+        "extraId": "E01",
+        "order": 1
+      },
+      {
+        "extraId": "E02",
+        "order": 2
+      },
+      {
+        "extraId": "E03",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "productId": "003",
+    "name": "Millefoglie di Fragole",
+    "description": "Fragole fresche, crema al mascarpone, millefoglie, gelato di crema.",
+    "price": 8.2,
+    "image": "../lib/images/coppa_millefoglie_fragole.jpg",
+    "categoryId": "C01",
+    "extras": [
+      {
+        "extraId": "E01",
+        "order": 1
+      },
+      {
+        "extraId": "E02",
+        "order": 2
+      },
+      {
+        "extraId": "E03",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "productId": "004",
+    "name": "Coppetta Piccola",
+    "description": "descrizione fittizia",
+    "price": 3.0,
+    "categoryId": "C02",
+    "extras": [
+      {
+        "extraId": "E02",
+        "order": 1
+      },
+      {
+        "extraId": "E04",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "productId": "005",
+    "name": "Coppetta Media",
+    "description": "descrizione fittizia",
+    "price": 4.0,
+    "categoryId": "C02",
+    "extras": [
+      {
+        "extraId": "E02",
+        "order": 1
+      },
+      {
+        "extraId": "E04",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "productId": "006",
+    "name": "Coppetta Grande",
+    "description": "descrizione fittizia",
+    "price": 4.5,
+    "categoryId": "C02",
+    "extras": [
+      {
+        "extraId": "E02",
+        "order": 1
+      },
+      {
+        "extraId": "E04",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "productId": "007",
+    "name": "Vaschetta 300g",
+    "description": "descrizione fittizia",
+    "price": 5.0,
+    "categoryId": "C03",
+    "extras": [
+      {
+        "extraId": "E01",
+        "order": 1
+      },
+      {
+        "extraId": "E04",
+        "order": 2
+      },
+      {
+        "extraId": "E05",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "productId": "008",
+    "name": "Vaschetta 600g",
+    "description": "descrizione fittizia",
+    "price": 8.5,
+    "categoryId": "C03",
+    "extras": [
+      {
+        "extraId": "E01",
+        "order": 1
+      },
+      {
+        "extraId": "E04",
+        "order": 2
+      },
+      {
+        "extraId": "E05",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "productId": "009",
+    "name": "Vaschetta 900g",
+    "description": "descrizione fittizia",
+    "price": 10.0,
+    "categoryId": "C03",
+    "extras": [
+      {
+        "extraId": "E01",
+        "order": 1
+      },
+      {
+        "extraId": "E04",
+        "order": 2
+      },
+      {
+        "extraId": "E05",
+        "order": 3
+      }
+    ]
+  }
+]

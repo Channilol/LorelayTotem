@@ -1,0 +1,17 @@
+[
+  {
+    "categoryId": "C01",
+    "name": "I Gourmet",
+    "image": "../lib/images/icon_cloche.png"
+  },
+  {
+    "categoryId": "C02",
+    "name": "I Classici",
+    "image": "../lib/images/icon_ice_cream.png"
+  },
+  {
+    "categoryId": "C03",
+    "name": "Lactose Free",
+    "image": "../lib/images/icon_lactose_free.png"
+  }
+]
